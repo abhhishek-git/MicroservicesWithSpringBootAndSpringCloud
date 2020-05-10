@@ -5,13 +5,11 @@ import java.util.Date;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
-import org.springframework.hateoas.RepresentationModel;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "All details about the User")
-public class User extends RepresentationModel<User>{
+public class User{
 	
 	private Integer id;
 	
