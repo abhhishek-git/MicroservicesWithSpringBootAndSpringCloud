@@ -18,7 +18,7 @@ public class FilteringController {
 	@GetMapping("/filtering")
 	public MappingJacksonValue retrieveSomeBean() {
 		SomeBean someBean = new SomeBean("valeue1", "value2","value3");
-		
+
 		FilterProvider filters = extracted("field1", "field2");
 		
 		MappingJacksonValue mapping = new MappingJacksonValue(someBean);
@@ -32,9 +32,9 @@ public class FilteringController {
 	public MappingJacksonValue retrieveListOfSomeBeans() {
 		List<SomeBean> list = Arrays.asList(new SomeBean("valeue1", "value2","value3"),
 				new SomeBean("valeue11", "value22","value33"));
-		
+
 		FilterProvider filters = extracted("field2", "field3");
-		
+
 		MappingJacksonValue mapping = new MappingJacksonValue(list);
 		mapping.setFilters(filters);
 		
