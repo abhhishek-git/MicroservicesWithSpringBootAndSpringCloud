@@ -26,6 +26,9 @@ public class User{
 	@Past
 	@ApiModelProperty(notes = "Birth date should be before current time")
 	private Date birthDate;
+	
+	public User() {
+	}
 
 	public User(Integer id, String name, Date birthDate) {
 		super();
